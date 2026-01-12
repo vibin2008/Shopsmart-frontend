@@ -15,7 +15,7 @@ function login(){
       })
     .then(res => res.json())
     .then(data => {
-        var result = data.get('status');
+        var result = data.status;
         if(result == 'success'){
           alert('Sigined In Successfully !');
         }
