@@ -15,7 +15,14 @@ function login(){
       })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        var result = data.get('status');
+        if(result == 'success'){
+          alert('Sigined In Successfully !');
+        }
+        else{
+          alert('Wrong Username or password !');
+        }
+
     });
 
 }
