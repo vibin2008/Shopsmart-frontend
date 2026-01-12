@@ -3,6 +3,7 @@
         <title>
             ShopSmart new Account
         </title>
+        <script src="newaccount.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -10,9 +11,18 @@
         <nav>
             <h1>ShopSmart</h1>
         </nav>
-
-        <div>
-
+        <br><br>
+        <center>
+        <div id = 'details'>
+            <form>
+                Username: <input type="text" oninput=""><br><br>
+                Password: <input type="text"><br><br>
+                Confirm Password: <input type="text"><br><br>
+                Phone Number: <input type="number"><br><br>
+                <button type='button' onclick="geolocation()">Get Current Location</button><br><br>
+                Address: <textarea name='address' id="address_box" rows="5" cols="30"></textarea>
+            </form>
         </div>
+        </center>
     </body>
 </html>
