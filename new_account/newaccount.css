@@ -13,3 +13,17 @@ nav{
 #details{
     text-align: center;
 }
+
+input{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+input.error {
+    border-color: red;
+}
+
+span{
+    font-size: small;
+    color: red;
+}

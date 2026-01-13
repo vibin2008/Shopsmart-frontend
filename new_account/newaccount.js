@@ -27,3 +27,30 @@ function geolocation(){
         )
     }
 }
+
+function check_username(){
+    var username = document.getElementById('username').value;
+    var msg = document.getElementById('username_msg');
+    if (username.length >= 6){
+        msg.textContent = '';
+        fetch("https://ayla-ropier-consuela.ngrok-free.dev/username_check",{
+        method : "POST",
+        headers: {
+                "Content-Type": "application/json"
+            },
+        body: JSON.stringify({
+                user: username
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            var result = data.status;
+            if(result == 'failure'){
+                msg.textContent = '*Username Unavailable,try new one'
+            }
+        });
+    }
+    else{
+        msg.textContent = '*Username should be atleast 6 characters long';
+    }
+}
